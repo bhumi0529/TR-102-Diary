@@ -7,7 +7,7 @@ body {
   color: white;
   margin: 0;
 
-  background-image: url("b.jpg");
+  background-image: url("background.jpg");
   background-size: cover;
 }
 .top-navbar {
