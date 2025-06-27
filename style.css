@@ -1,0 +1,147 @@
+body {
+  font-family: Arial, sans-serif;
+  background: linear-gradient(135deg, #cfd9df, #e2ebf0);
+  min-height: 100vh;
+  background-color: #faf9f6;
+  padding: 20px;
+  color: white;
+  margin: 0;
+
+  background-image: url("b.jpg");
+  background-size: cover;
+}
+.top-navbar {
+  background-color: #001f3f;
+  color: white;
+  padding: 10px 20px;
+  height: 60px;
+  display: flex;
+  align-items: center;
+  justify-content:center;
+  gap: 10px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.5);
+}
+.top-navbar .logo {
+  height: 60px;
+}
+.top-navbar span {
+  font-size: 2rem;
+  font-weight: bold;
+}
+.student-info {
+  position:absolute;
+  top: 57px;
+  right: 28px;
+  color: white;
+  font-size: 1rem;
+  font-weight: bold;
+  
+}
+
+h1 {
+  text-align: center;
+  font-size: 2.5rem;
+  margin: 1rem 0 0.5rem;
+  text-shadow: 2px 2px 8px rgba(0,0,0,0.3);
+}
+.week-nav {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  flex-wrap: wrap;
+  margin-bottom: 20px;
+}
+.week-nav button {
+  padding: 0.7rem 1.2rem;
+  background: rgba(255,255,255,0.2);
+  background-color: black;
+  border: none;
+  border-radius: 8px;
+  color: white;
+  font-size: 1rem;
+  cursor: pointer;
+  backdrop-filter: blur(8px);
+  transition: background 0.3s ease;
+}
+.week-nav button:hover {
+  background-color: grey;
+}
+#days-container {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  margin-bottom: 5rem;
+   margin-top: 10px;
+   bottom: 15px;
+}
+#days-container button {
+ 
+  padding: 0.7rem 1rem;
+  border: none;
+  border-radius: 6px;
+  background: rgba(255,255,255,0.2);
+  background-color: #648DB3;
+  color:white;
+  transition: background 0.3s ease;
+}
+#days-container button:hover {
+  background-color:dimgrey;
+}
+#diary-entry {
+  max-width: 600px;
+  margin: 0 auto;
+  padding: 1rem;
+  background-color: #578FCA;
+  border-radius: 12px;
+  box-shadow: 0 0 10px rgba(0,0,0,0.4);
+  margin-top: 80px;
+}
+#entry-title {
+  font-size: 1.5rem;
+  text-align: center;
+  margin-bottom: 0.5rem;
+  color:#09122C;
+}
+#entry-content {
+  min-height: 80px;
+  padding: 0.5rem;
+  background: rgba(255,255,255,0.1);
+  border-radius: 8px;
+  display: flex;
+
+}
+
+.summary-text {
+  color:#021526; 
+  font-size: 1.2rem;
+  margin-bottom: 30px;
+  font-weight: 500;
+  text-align: center;
+  
+}
+
+
+.pdf-wrapper {
+  text-align: right;
+  margin-top: 110px;
+}
+.pdf-icon {
+  font-size: 1.5rem; 
+  margin-right: 6px;
+  vertical-align: middle;
+}
+
+
+.pdf-link {
+  color: #344C64; 
+  font-size: 0.8rem;
+  font-weight:bold;
+  text-decoration:wavy;
+  display: inline-flex;
+  
+}
+
+.pdf-link:hover {
+  text-decoration: underline;
+}
