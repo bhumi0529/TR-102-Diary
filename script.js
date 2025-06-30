@@ -14,7 +14,14 @@ const diaryData = {
   4: {
     text: "Started learning Machine Learning basics. Explored the California Housing dataset using Pandas in Google Colab. Applied data manipulation techniques including sorting, filtering, and summary statistics to understand the dataset structure and trends.",
     pdf: "pdfs/Day4.pdf"
-  }
+  },
+  5: {
+  text: "Implemented Logistic Regression using scikit-learn on the Iris dataset. \
+Learned the concept of classification in machine learning and explored its real-life applications. \
+The Titanic dataset from Kaggle was also reviewed as an example of binary classification. \
+Evaluated model accuracy and predicted class labels using the trained model.",
+  pdf: "pdfs/Day5.pdf"
+}
   
 };
 
@@ -31,27 +38,26 @@ function showAllDays() {
 
 function showEntry(day) {
   const entry = diaryData[day];
+
   document.getElementById('entry-title').innerText = `Day ${day}`;
-  if (!entry) {
-    document.getElementById('entry-content').innerHTML = `
-      <div class="summary-text">No summary available for Day ${day}.</div>
-    `;
-    return;
-  }
-  let contentHtml = `<div class="summary-text">${entry.text || 'No summary available.'}</div>`;
-
-  if (entry.pdf) {
-    contentHtml += `
-       <div class="pdf-wrapper">
-      <a href="javascript:void(0);" onclick="openPDF('${entry.pdf}')" class="pdf-link">
-        <span class="pdf-icon">📄</span>
-        <span class="pdf-text">View PDF</span>
-      </a>
-    </div>`;
-  }
-
+  
+  let contentHtml = `<div class="summary-text">${entry?.text || 'No summary available.'}</div>`;
   document.getElementById('entry-content').innerHTML = contentHtml;
+
+  const viewer = document.getElementById('pdf-container');
+  if (entry?.pdf) {
+    viewer.innerHTML = `
+      <div class="pdf-viewer fade-in">
+        <button onclick="closePDF()" class="close-pdf-btn">✖ Close PDF</button>
+        <iframe src="${entry.pdf}" width="100%" height="600px" style="border:1px solid #ccc; border-radius:10px;"></iframe>
+      </div>
+    `;
+    viewer.scrollIntoView({ behavior: 'smooth' });
+  } else {
+    viewer.innerHTML = ''; 
+  }
 }
+
 
 function openPDF(pdfPath) {
   const viewer = document.getElementById('pdf-container');
