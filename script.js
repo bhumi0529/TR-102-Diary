@@ -64,7 +64,7 @@ function openPDF(pdfPath) {
   viewer.innerHTML = `
     <div class="pdf-viewer fade-in">
       <button onclick="closePDF()" class="close-pdf-btn">✖ Close PDF</button>
-      <iframe src="${pdfPath}" width="100%" height="600px"></iframe>
+      <iframe src="${pdfPath}" width="100%" height="900px" style="border:1px solid #ccc; border-radius:10px;"></iframe>
     </div>
   `;
   viewer.scrollIntoView({ behavior: 'smooth' });
