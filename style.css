@@ -1,6 +1,6 @@
 body {
   font-family: Arial, sans-serif;
-  background: linear-gradient(135deg, #cfd9df, #e2ebf0);
+  background: linear-gradient(135deg, #e8f0fe, #fafafa);
   min-height: 100vh;
   background-color: #faf9f6;
   padding: 20px;
@@ -13,29 +13,47 @@ body {
 .top-navbar {
   background-color: #001f3f;
   color: white;
-  padding: 10px 20px;
+  padding: 12px 30px; 
   height: 60px;
   display: flex;
   align-items: center;
   justify-content:center;
   gap: 10px;
+  border-radius: 10px;
   box-shadow: 0 2px 8px rgba(0,0,0,0.5);
 }
 .top-navbar .logo {
-  height: 60px;
+  height: 50px; 
 }
 .top-navbar span {
   font-size: 2rem;
   font-weight: bold;
 }
+.training-info {
+  text-align: center;
+  margin-top: 5px;
+  font-size: 1.4rem;
+  color: #007B8A; /* Teal Blue */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+
+
+.company-text {
+  font-weight: 600;
+}
+
 .student-info {
   position:absolute;
   top: 57px;
   right: 28px;
-  color: white;
+  color: white; 
   font-size: 1rem;
-  font-weight: bold;
-  
+  font-weight: 600;
+  font-family:Arial, Helvetica, sans-serif;
 }
 
 h1 {
@@ -44,64 +62,77 @@ h1 {
   margin: 1rem 0 0.5rem;
   text-shadow: 2px 2px 8px rgba(0,0,0,0.3);
 }
-.week-nav {
-  display: flex;
-  justify-content: center;
-  gap: 10px;
-  flex-wrap: wrap;
-  margin-bottom: 20px;
-}
-.week-nav button {
-  padding: 0.7rem 1.2rem;
-  background: rgba(255,255,255,0.2);
-  background-color: black;
-  border: none;
-  border-radius: 8px;
-  color: white;
-  font-size: 1rem;
-  cursor: pointer;
-  backdrop-filter: blur(8px);
-  transition: background 0.3s ease;
-}
-.week-nav button:hover {
-  background-color: grey;
-}
+
 #days-container {
   display: flex;
   justify-content: center;
   flex-wrap: wrap;
   gap: 0.5rem;
-  margin-bottom: 5rem;
-   margin-top: 10px;
-   bottom: 15px;
+  margin-bottom: 10px;
+  margin-top: 50px;
+  bottom: 15px;
 }
-#days-container button {
- 
-  padding: 0.7rem 1rem;
-  border: none;
+
+ #days-container button {
+  min-width: 90px;
+  margin: 6px;
+  font-size: 1rem;
+  color: #fff;
+  background: #000;
   border-radius: 6px;
-  background: rgba(255,255,255,0.2);
-  background-color: #648DB3;
-  color:white;
   transition: background 0.3s ease;
 }
+
 #days-container button:hover {
   background-color:dimgrey;
 }
+.extra-buttons {
+  text-align: center;
+  margin-top: 0;
+}
+
+
+.action-btn {
+  color: #fff;
+  padding: 10px 22px;
+  text-decoration: none;
+  border-radius: 6px;
+  font-weight: 600;
+  transition: background-color 0.3s ease;
+  margin: 6px;
+  display: inline-block;
+}
+
+.action-btn.certificate {
+  background-color: #2F4F4F;
+}
+
+.action-btn.project {
+  background-color: #2F4F4F;
+}
+
+.action-btn:hover {
+  opacity: 0.85;
+  background-color: #333;
+}
+
 #diary-entry {
   max-width: 600px;
+  margin-top: 30px;
   margin: 0 auto;
   padding: 1rem;
   background-color: #578FCA;
   border-radius: 12px;
   box-shadow: 0 0 10px rgba(0,0,0,0.4);
-  margin-top: 80px;
+  
 }
 #entry-title {
+  font-weight: bold; 
+  color: #001f3f;
   font-size: 1.5rem;
   text-align: center;
   margin-bottom: 0.5rem;
-  color:#09122C;
+  
 }
 #entry-content {
   min-height: 80px;
@@ -113,12 +144,11 @@ h1 {
 }
 
 .summary-text {
-  color:#021526; 
-  font-size: 1.2rem;
+  color: #fff;
+  font-weight: bold;
+  font-size: 1.1rem;
   margin-bottom: 30px;
-  font-weight: 500;
   text-align: center;
-  
 }
 
 
@@ -145,3 +175,41 @@ h1 {
 .pdf-link:hover {
   text-decoration: underline;
 }
+
+
+#pdf-container {
+  margin-top: 20px;
+  padding: 10px;
+}
+.pdf-viewer {
+  border: 1px solid #ccc;
+  border-radius: 10px;
+  margin-top: 20px;
+  padding: 10px;
+  background: #f9f9f9;
+  position: relative;
+  animation: fadeIn 0.6s ease-in-out;
+}
+
+.close-pdf-btn {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  background: #e60000;
+  color: white;
+  border: none;
+  padding: 5px 12px;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 0.9rem;
+}
+
+.close-pdf-btn:hover {
+  background: #cc0000;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+

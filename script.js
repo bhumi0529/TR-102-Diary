@@ -42,13 +42,54 @@ function showEntry(day) {
 
   if (entry.pdf) {
     contentHtml += `
-      <div class="pdf-wrapper">
-        <a href="${entry.pdf}" target="_blank" class="pdf-link">
-        <span class="pdf-icon">📄</span>View PDF</a>
-      </div>`;
+       <div class="pdf-wrapper">
+      <a href="javascript:void(0);" onclick="openPDF('${entry.pdf}')" class="pdf-link">
+        <span class="pdf-icon">📄</span>
+        <span class="pdf-text">View PDF</span>
+      </a>
+    </div>`;
   }
 
   document.getElementById('entry-content').innerHTML = contentHtml;
 }
+
+function openPDF(pdfPath) {
+  const viewer = document.getElementById('pdf-container');
+  viewer.innerHTML = `
+    <div class="pdf-viewer fade-in">
+      <button onclick="closePDF()" class="close-pdf-btn">✖ Close PDF</button>
+      <iframe src="${pdfPath}" width="100%" height="600px"></iframe>
+    </div>
+  `;
+  viewer.scrollIntoView({ behavior: 'smooth' });
+
+  
+}
+function closePDF() {
+  document.getElementById('pdf-container').innerHTML = '';
+}
+function openCertificate() {
+  const viewer = document.getElementById('pdf-container');
+  viewer.innerHTML = `
+    <div class="pdf-viewer fade-in">
+      <button onclick="closePDF()" class="close-pdf-btn">✖ Close PDF</button>
+      <iframe src="pdfs/certificate.pdf" width="100%" height="600px"></iframe>
+    </div>
+  `;
+  viewer.scrollIntoView({ behavior: 'smooth' });
+}
+
+function openProject() {
+  const viewer = document.getElementById('pdf-container');
+  viewer.innerHTML = `
+    <div class="pdf-viewer fade-in">
+      <button onclick="closePDF()" class="close-pdf-btn">✖ Close PDF</button>
+      <iframe src="pdfs/project-report.pdf" width="100%" height="600px"></iframe>
+    </div>
+  `;
+  viewer.scrollIntoView({ behavior: 'smooth' });
+}
+
+
 
 document.addEventListener('DOMContentLoaded', showAllDays);
