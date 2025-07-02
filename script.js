@@ -21,6 +21,12 @@ Learned the concept of classification in machine learning and explored its real-
 The Titanic dataset from Kaggle was also reviewed as an example of binary classification. \
 Evaluated model accuracy and predicted class labels using the trained model.",
   pdf: "pdfs/Day5.pdf"
+},
+6: {
+  text: "Extended Logistic Regression using Iris dataset loaded with pandas. Trained, tested, and saved the model using joblib. \
+Evaluated performance with classification report and accuracy score. Introduced K-Nearest Neighbors (KNN) as a distance-based classification algorithm. \
+Created a function to predict flower species based on user input.",
+  pdf: "pdfs/Day6.pdf"
 }
   
 };
