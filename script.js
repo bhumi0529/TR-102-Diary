@@ -27,6 +27,13 @@ Evaluated model accuracy and predicted class labels using the trained model.",
 Evaluated performance with classification report and accuracy score. Introduced K-Nearest Neighbors (KNN) as a distance-based classification algorithm. \
 Created a function to predict flower species based on user input.",
   pdf: "pdfs/Day6.pdf"
+},
+7: {
+  text: "Implemented Logistic Regression on the Iris dataset using pandas and scikit-learn. \
+Evaluated the model with accuracy and classification report. \
+Also learned how to save models using joblib. \
+Introduced K-Nearest Neighbors (KNN) as a distance-based classification algorithm.",
+  pdf: "pdfs/Day7.pdf"
 }
   
 };
