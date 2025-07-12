@@ -34,6 +34,36 @@ Evaluated the model with accuracy and classification report. \
 Also learned how to save models using joblib. \
 Introduced K-Nearest Neighbors (KNN) as a distance-based classification algorithm.",
   pdf: "pdfs/Day7.pdf"
+},
+8: {
+  text: "Explored Decision Tree and Random Forest classifiers. Visualized and analyzed the Iris dataset. \
+Trained models using scikit-learn and evaluated them with accuracy scores and confusion matrices. \
+Learned how Random Forest improves over a single Decision Tree by using ensemble techniques.",
+  pdf: "pdfs/Day8.pdf"
+},
+9: {
+  text: "Implemented Random Forest for Customer Churn Prediction using real-world Telco dataset. \
+Learned Unsupervised Learning concepts like clustering and dimensionality reduction. \
+Also discussed Heart Disease Prediction as a healthcare ML application.",
+  pdf: "pdfs/Day9.pdf"
+},
+10: {
+  text: "Explored Dimensionality Reduction using PCA on a vehicle dataset. \
+Performed outlier removal, correlation analysis, and reduced features from 19 to 2 for visualization. \
+Visualized class separation using principal components.",
+  pdf: "pdfs/Day10.pdf"
+},
+11: {
+  text: "Implemented K-Means Clustering using an unlabeled social media dataset. \
+Performed preprocessing, label encoding, and scaling. \
+Used Elbow Method to find optimal clusters and visualized cluster behavior.",
+  pdf: "pdfs/Day11.pdf"
+},
+12: {
+  text: "Learned and implemented Hierarchical Clustering on the Mall Customer dataset. \
+Created a dendrogram using Ward linkage to identify optimal clusters. \
+Used Agglomerative Clustering and visualized customer segments based on income and spending.",
+  pdf: "pdfs/Day12.pdf"
 }
   
 };
