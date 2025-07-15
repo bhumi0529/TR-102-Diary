@@ -64,7 +64,13 @@ Used Elbow Method to find optimal clusters and visualized cluster behavior.",
 Created a dendrogram using Ward linkage to identify optimal clusters. \
 Used Agglomerative Clustering and visualized customer segments based on income and spending.",
   pdf: "pdfs/Day12.pdf"
+},
+13: {
+  text: "Applied DBSCAN Clustering on Mall Customer dataset using age, income, and spending score. \
+Used KNN to determine optimal epsilon. Detected dense regions and outliers without needing predefined clusters.",
+  pdf: "pdfs/Day13.pdf"
 }
+
   
 };
 
