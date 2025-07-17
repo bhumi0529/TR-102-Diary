@@ -69,7 +69,12 @@ Used Agglomerative Clustering and visualized customer segments based on income a
   text: "Applied DBSCAN Clustering on Mall Customer dataset using age, income, and spending score. \
 Used KNN to determine optimal epsilon. Detected dense regions and outliers without needing predefined clusters.",
   pdf: "pdfs/Day13.pdf"
+},
+14: {
+  text: "Introduced to Neural Networks using TensorFlow. Built and trained a simple model to predict car MPG from horsepower using the Auto MPG dataset. Visualized predictions and understood key differences between ML, Neural Networks, and Deep Learning.",
+  pdf: "pdfs/Day14.pdf"
 }
+
 
   
 };
