@@ -73,7 +73,12 @@ Used KNN to determine optimal epsilon. Detected dense regions and outliers witho
 14: {
   text: "Introduced to Neural Networks using TensorFlow. Built and trained a simple model to predict car MPG from horsepower using the Auto MPG dataset. Visualized predictions and understood key differences between ML, Neural Networks, and Deep Learning.",
   pdf: "pdfs/Day14.pdf"
+},
+15: {
+  text: "Explored different types of Neural Networks including Feedforward, CNN, RNN, and LSTM. Studied the role of Activation Functions (ReLU, Sigmoid, Tanh) in adding non-linearity. Visualized them using Matplotlib for better understanding.",
+  pdf: "pdfs/Day15.pdf"
 }
+
 
 
   
