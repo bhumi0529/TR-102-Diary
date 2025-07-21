@@ -77,11 +77,16 @@ Used KNN to determine optimal epsilon. Detected dense regions and outliers witho
 15: {
   text: "Explored different types of Neural Networks including Feedforward, CNN, RNN, and LSTM. Studied the role of Activation Functions (ReLU, Sigmoid, Tanh) in adding non-linearity. Visualized them using Matplotlib for better understanding.",
   pdf: "pdfs/Day15.pdf"
+},
+16: {
+  text: "Built a Convolutional Neural Network (CNN) using TensorFlow on Fashion MNIST dataset. Applied convolutional and pooling layers, visualized predictions, and achieved high accuracy in classifying clothing items.",
+  pdf: "pdfs/Day16.pdf"
+},
+17: {
+  text: "Implemented Sentiment Analysis on the IMDB movie review dataset using LSTM (Long Short-Term Memory) networks. Preprocessed sequences, trained on padded inputs, and achieved high accuracy in classifying reviews as positive or negative. Visualized training performance over epochs.",
+  pdf: "pdfs/Day17.pdf"
 }
-
-
-
-  
+ 
 };
 
 function showAllDays() {
