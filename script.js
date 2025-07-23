@@ -85,14 +85,26 @@ Used KNN to determine optimal epsilon. Detected dense regions and outliers witho
 17: {
   text: "Implemented Sentiment Analysis on the IMDB movie review dataset using LSTM (Long Short-Term Memory) networks. Preprocessed sequences, trained on padded inputs, and achieved high accuracy in classifying reviews as positive or negative. Visualized training performance over epochs.",
   pdf: "pdfs/Day17.pdf"
-}
+},
+18: {
+  text: "Explored the difference between Weights and Bias in neural networks. Understood how weights control the influence of inputs and how bias shifts activation. Implemented a small demo to visualize how changing weights and bias affects neuron output.",
+  pdf: "pdfs/Day18.pdf"
+},
+19: {
+  text: "Explored different deep learning optimizers including SGD, Momentum, RMSProp, and Adam. \
+Compared their training performance using MNIST dataset with TensorFlow and visualized validation accuracy over epochs.",
+  pdf: "pdfs/Day19.pdf"
+},
+
+
+
  
 };
 
 function showAllDays() {
   const daysContainer = document.getElementById('days-container');
   daysContainer.innerHTML = '';
-  for (let day = 1; day <= 30; day++) {
+  for (let day = 1; day <= 25; day++) {
     const btn = document.createElement('button');
     btn.innerText = `Day ${day}`;
     btn.onclick = () => showEntry(day); 
