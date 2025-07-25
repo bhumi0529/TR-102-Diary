@@ -101,15 +101,19 @@ h1 {
   transition: background-color 0.3s ease;
   margin: 6px;
   display: inline-block;
+  
+  background-color: #2F4F4F;
+  border: none;
+  border-radius: 8px;
+  font-weight: bold;
+  cursor: pointer;
 }
 
 .action-btn.certificate {
   background-color: #2F4F4F;
 }
 
-.action-btn.project {
-  background-color: #2F4F4F;
-}
+
 
 .action-btn:hover {
   opacity: 0.85;
@@ -199,11 +203,12 @@ h1 {
 
 .footer {
   text-align: center;
-  padding: 15px;
+  padding: 10px;
   font-size: 1rem;
   color: #ffffff;
   background-color: #0e1a2b;
   border-radius: 10px;
+
 }
 .footer a {
   color: #4da6ff;

@@ -95,16 +95,25 @@ Used KNN to determine optimal epsilon. Detected dense regions and outliers witho
 Compared their training performance using MNIST dataset with TensorFlow and visualized validation accuracy over epochs.",
   pdf: "pdfs/Day19.pdf"
 },
-
-
-
+20: {
+  text: "Explored how neural networks learn by updating weights using backpropagation and gradient descent. \
+Understood the role of learning rate and gradients in adjusting weights to minimize loss. \
+Implemented weight update logic using NumPy to simulate training a simple model.",
+  pdf: "pdfs/Day20.pdf"
+},
+21: {
+  text: "Explored the concept of Variance in Machine Learning including low, high, and ideal variance. \
+Also understood the Gradient Descent algorithm in detail, including types like Batch, Stochastic, and Mini-Batch Gradient Descent. \
+Learned how it helps in optimizing the loss function and updating weights in neural networks.",
+  pdf: "pdfs/Day21.pdf"
+}
  
 };
 
 function showAllDays() {
   const daysContainer = document.getElementById('days-container');
   daysContainer.innerHTML = '';
-  for (let day = 1; day <= 25; day++) {
+  for (let day = 1; day <= 21; day++) {
     const btn = document.createElement('button');
     btn.innerText = `Day ${day}`;
     btn.onclick = () => showEntry(day); 
@@ -161,15 +170,10 @@ function openCertificate() {
   viewer.scrollIntoView({ behavior: 'smooth' });
 }
 
-function openProject() {
-  const viewer = document.getElementById('pdf-container');
-  viewer.innerHTML = `
-    <div class="pdf-viewer fade-in">
-      <button onclick="closePDF()" class="close-pdf-btn">✖ Close PDF</button>
-      <iframe src="pdfs/project-report.pdf" width="100%" height="600px"></iframe>
-    </div>
-  `;
-  viewer.scrollIntoView({ behavior: 'smooth' });
+
+function toggleProjects() {
+  const section = document.getElementById('project-buttons');
+  section.style.display = section.style.display === 'none' ? 'block' : 'none';
 }
 
 
