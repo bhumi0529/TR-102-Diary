@@ -326,7 +326,7 @@ function openFinalReport() {
   viewer.innerHTML = `
     <div class="pdf-viewer fade-in">
       <button onclick="closePDF()" class="close-pdf-btn">✖ Close PDF</button>
-      <iframe src="pdfs/final_report.pdf" width="100%" height="700px" style="border:1px solid #ccc; border-radius:10px;"></iframe>
+      <iframe src="pdfs/Training_Report.pdf" width="100%" height="700px" style="border:1px solid #ccc; border-radius:10px;"></iframe>
     </div>
   `;
   viewer.scrollIntoView({ behavior: 'smooth' });
