@@ -1,4 +1,4 @@
-body {
+/* body {
   font-family: Arial, sans-serif;
   background: linear-gradient(135deg, #e8f0fe, #fafafa);
   min-height: 100vh;
@@ -8,8 +8,20 @@ body {
   margin: 0;
 
   background-image: url("background.jpg");
+  background-size:cover;
+} */
+body {
+  background-image: url('background.jpg');
+  background-repeat: no-repeat;
   background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+  background-color: #f5f5f5; /* fallback color */
+  font-family: 'Segoe UI', sans-serif;
+  margin: 0;
+  padding: 0;
 }
+
 .top-navbar {
   background-color: #001f3f;
   color: white;
@@ -63,7 +75,7 @@ h1 {
   text-shadow: 2px 2px 8px rgba(0,0,0,0.3);
 }
 
-#days-container {
+ #days-container {
   display: flex;
   justify-content: center;
   flex-wrap: wrap;
@@ -75,7 +87,8 @@ h1 {
 
  #days-container button {
   min-width: 90px;
-  margin: 6px;
+  padding: 2px;
+  margin: 8px;
   font-size: 1rem;
   color: #fff;
   background: #000;
@@ -85,6 +98,7 @@ h1 {
 
 #days-container button:hover {
   background-color:dimgrey;
+  transform: scale(1.05);
 }
 .extra-buttons {
   text-align: center;
@@ -101,7 +115,7 @@ h1 {
   transition: background-color 0.3s ease;
   margin: 6px;
   display: inline-block;
-  
+  transition: all 0.3s ease-in-out;
   background-color: #2F4F4F;
   border: none;
   border-radius: 8px;
@@ -112,12 +126,14 @@ h1 {
 .action-btn.certificate {
   background-color: #2F4F4F;
 }
+.action-btn.project-report { background: #58A0C8; color: #fff; }
+.action-btn.github-link { background: #58A0C8; color: #fff; }
 
 
 
 .action-btn:hover {
   opacity: 0.85;
-  background-color: #333;
+  background-color: #7A7A73;
 }
 
 #diary-entry {
@@ -185,11 +201,19 @@ h1 {
 .close-pdf-btn:hover {
   background: #cc0000;
 }
+.fade-in {
+  animation: fadeIn 0.6s ease-in-out;
+}
 
 @keyframes fadeIn {
-  from { opacity: 0; transform: translateY(20px); }
+  from { opacity: 0; transform: translateY(15px); }
   to { opacity: 1; transform: translateY(0); }
 }
+
+/* @keyframes fadeIn {
+  from { opacity: 0; transform: translateY(20px); }
+  to { opacity: 1; transform: translateY(0); }
+} */
 
  html, body {
   height: 100%;
@@ -218,5 +242,4 @@ h1 {
 .footer a:hover {
   text-decoration: underline;
 }
-
 

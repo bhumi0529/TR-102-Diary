@@ -128,6 +128,8 @@ function showEntry(day) {
   
   let contentHtml = `<div class="summary-text">${entry?.text || 'No summary available.'}</div>`;
   document.getElementById('entry-content').innerHTML = contentHtml;
+  document.getElementById('entry-content').classList.add('fade-in');
+
 
   const viewer = document.getElementById('pdf-container');
   if (entry?.pdf) {
@@ -164,16 +166,70 @@ function openCertificate() {
   viewer.innerHTML = `
     <div class="pdf-viewer fade-in">
       <button onclick="closePDF()" class="close-pdf-btn">✖ Close PDF</button>
-      <iframe src="pdfs/certificate.pdf" width="100%" height="600px"></iframe>
+      <iframe src="pdfs/training_certificate.pdf" width="100%" height="600px"></iframe>
     </div>
   `;
   viewer.scrollIntoView({ behavior: 'smooth' });
+  confetti({
+    particleCount: 120,
+    spread: 90,
+    origin: { y: 0.6 }
+  });
 }
 
 
 function toggleProjects() {
   const section = document.getElementById('project-buttons');
   section.style.display = section.style.display === 'none' ? 'block' : 'none';
+}
+function openFinalReport() {
+  const viewer = document.getElementById('pdf-container');
+  viewer.innerHTML = `
+    <div class="pdf-viewer fade-in">
+      <button onclick="closePDF()" class="close-pdf-btn">✖ Close PDF</button>
+      <iframe src="pdfs/final_report.pdf" width="100%" height="700px" style="border:1px solid #ccc; border-radius:10px;"></iframe>
+    </div>
+  `;
+  viewer.scrollIntoView({ behavior: 'smooth' });
+}
+
+
+function showProject(project) {
+  const projects = {
+    weather: {
+      pdf: "pdfs/weather_prediction_report.pdf",
+      github: "https://github.com/bhumi0529/Weather_Prediction_App.git",
+      title: "🌦️ Weather Prediction App",
+      text: "This mini-project uses a machine learning model to predict the likelihood of rain based on inputs like temperature, humidity, pressure, and wind speed. Built using Python, scikit-learn, and Streamlit, the app displays predictions with feature importance visualizations and user-friendly sliders.This project uses machine learning to predict rainfall using weather parameters"
+    },
+    iris: {
+      pdf: "pdfs/Iris_prediction_report.pdf",
+      github: "https://bhumi0529-iris-flower-prediction-app-iris-app-ayxzp9.streamlit.app/",
+      title: "🌸 Iris Flower Classification App",
+      text: "The Iris project classifies flower species (Setosa, Versicolor, Virginica) based on their sepal and petal measurements. Built with Random Forest and Streamlit, it features feature importance plots and an elegant UI for input and prediction."
+    },
+    emotion: {
+      pdf: "pdfs/Emotion_aware_report.pdf",
+      github: "https://github.com/bhumi0529/Emotion-Aware-Virtual-Study-Companion.git",
+      title: "🧠 Emotion-Aware Virtual Study Companion",
+      text: "This major project detects student emotions in real-time using a webcam and suggests motivational tips accordingly. Built using TensorFlow, OpenCV, and Flask, the app enhances study efficiency through smart emotional feedback."
+    }
+  };
+
+  const p = projects[project];
+  const container = document.getElementById('project-details');
+  container.innerHTML = `
+    <div>
+      <h3 style="color: #113F67;">${p.title}</h3>
+      <p style="font-size: 1.4rem; color: #1B3C53; line-height: 1.6;">${p.text}</p>
+      <div style="margin-top: 15px;">
+        <button class="action-btn" style="background: #34699A; color: #fff; margin-right: 10px;" onclick="openPDF('${p.pdf}')">📄 View Report</button>
+        <button class="action-btn" style="background: #34699A; color: #fff;" onclick="window.open('${p.github}', '_blank')">🔗 GitHub Repo</button>
+      </div>
+    </div>
+  `;
+
+  container.scrollIntoView({ behavior: 'smooth' });
 }
 
 
