@@ -28,9 +28,6 @@
 <button class="action-btn project" onclick="toggleProjects()">📁 Projects</button>
   <button class="action-btn report" onclick="openFinalReport()">📘 Final Report</button>
 
-
-
-
 <div id="project-buttons" style="display: none; text-align: center; margin-top: 10px;">
   <button class="action-btn" onclick="showProject('weather')">🌦️ Mini Project: Weather</button>
   <button class="action-btn" onclick="showProject('iris')">🌸 Mini Project: Iris</button>
@@ -38,17 +35,18 @@
 </div>
 
 
-
-
-<!-- Container to show project details dynamically -->
 <div id="project-details" style="text-align:center; margin-top: 20px;"></div>
 
 
 <div id="diary-entry">
   <h2 id="entry-title">Please select a day</h2>
-  <p id="entry-content">Your diary entry will appear here.</p>
+  <div id="entry-content">Your diary entry will appear here.</div>
 </div>
+
+<div id="project-details" style="display: none; text-align:center; margin-top: 20px;"></div>
+
 <div id="pdf-container"></div>
+
 </div>
 <footer class="footer">
   <p>
