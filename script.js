@@ -204,7 +204,7 @@ function showProject(project) {
     },
     iris: {
       pdf: "pdfs/Iris_prediction_report.pdf",
-      github: "https://bhumi0529-iris-flower-prediction-app-iris-app-ayxzp9.streamlit.app/",
+      github: " https://bhumi0529.github.io/Iris_Flower_Prediction_App/",
       title: "🌸 Iris Flower Classification App",
       text: "The Iris project classifies flower species (Setosa, Versicolor, Virginica) based on their sepal and petal measurements. Built with Random Forest and Streamlit, it features feature importance plots and an elegant UI for input and prediction."
     },
